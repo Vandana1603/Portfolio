@@ -396,20 +396,9 @@
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 25px;
 }
-
 .achievement-card {
-  background-color: var(--bg-card);  
-  border: 1px solid var(--border-color);
-  border-radius: 14px;
-  padding: 22px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.5);
-  transition: all 0.3s ease;
   border-left: 4px solid var(--brand-primary);
-  position: relative;
-  overflow: hidden;
 }
-
-/* Glow overlay */
 .achievement-card::before {
   content: "";
   position: absolute;
