@@ -162,6 +162,7 @@
         overflow: hidden;
       }
 
+      /* Glow Effects */
       .glow-blob {
         position: absolute;
         width: 300px;
@@ -319,8 +320,9 @@
         line-height: 1.8;
       }
       .about-text strong { color: var(--text-white); }
-      .about-text .highlight { color: #60a5fa; } 
+      .about-text .highlight { color: #60a5fa; } /* light blue */
 
+      /* Skills Section */
       .skills-grid-layout {
         display: grid;
         gap: 2rem;
@@ -385,68 +387,43 @@
       .tech-name { font-size: 0.875rem; font-weight: 500; }
 .section-title-center {
   text-align: center;
-  font-size: 30px;
-  margin-bottom: 30px;
-  font-weight: 600;
-  color: var(--text-main);
+  font-size: 28px;
+  margin-bottom: 20px;
 }
 
 .achievements-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
 }
+
 .achievement-card {
-  border-left: 4px solid var(--brand-primary);
-}
-.achievement-card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    120deg,
-    transparent,
-    var(--brand-glow),
-    transparent
-  ); 
-  opacity: 0;
-  transition: 0.4s;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  transition: 0.3s;
+  cursor: pointer;
 }
 
-.achievement-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 12px;
-}
-
-.achievement-header h3 {
+.achievement-card h3 {
   font-size: 18px;
-  margin: 0;
-  color: var(--text-white);
+  margin-bottom: 10px;
 }
 
-.achievement-date {
-  font-size: 12px;
-  color: var(--text-muted);
-  background: rgba(14,165,233,0.15);
-  padding: 4px 10px;
-  border-radius: 6px;
-}
-
-.achievement-desc {
+.achievement-card p {
   font-size: 14px;
-  color: var(--text-main);
-  line-height: 1.6;
+  color: #555;
+}
+
+.achievement-card span {
+  display: block;
+  margin-top: 10px;
+  font-size: 12px;
+  color: #888;
 }
 
 .achievement-card:hover {
   transform: translateY(-8px);
-  background-color: var(--bg-card-hover); /* matches your theme */
-  box-shadow: 0 15px 40px rgba(0,0,0,0.8);
-  border-left: 4px solid var(--brand-primary);
-}
-
-.achievement-card:hover::before {
-  opacity: 1;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
 }
