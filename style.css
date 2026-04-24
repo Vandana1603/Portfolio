@@ -170,4 +170,9 @@ body {
   background: #475569;
 }
 
-.footer{background:var(--bg-card);border-top:1px solid var(--border-color);padding:30px;text-align:center;color:var(--text-muted);}
+.footer{
+  background:var(--bg-card);
+  border-top:1px solid var(--border-color);
+  padding:30px;text-align:center;
+  color:var(--text-muted);
+       }
