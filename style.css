@@ -391,6 +391,22 @@
   margin-bottom: 20px;
 }
 
+.project-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 1rem;
+  padding: 20px;
+  color: var(--text-main);
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+}
+
+.project-card:hover {
+  background-color: var(--bg-card-hover);
+  transform: translateY(-6px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.7);
+  border-color: var(--brand-primary);
+}
 .achievements-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
