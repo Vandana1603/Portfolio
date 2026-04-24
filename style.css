@@ -162,7 +162,6 @@
         overflow: hidden;
       }
 
-      /* Glow Effects */
       .glow-blob {
         position: absolute;
         width: 300px;
@@ -320,9 +319,8 @@
         line-height: 1.8;
       }
       .about-text strong { color: var(--text-white); }
-      .about-text .highlight { color: #60a5fa; } /* light blue */
+      .about-text .highlight { color: #60a5fa; } 
 
-      /* Skills Section */
       .skills-grid-layout {
         display: grid;
         gap: 2rem;
@@ -390,7 +388,7 @@
   font-size: 30px;
   margin-bottom: 30px;
   font-weight: 600;
-  color: #e5e7eb;
+  color: var(--text-main);
 }
 
 .achievements-container {
@@ -400,21 +398,28 @@
 }
 
 .achievement-card {
-  background:--bg-card; 
+  background-color: var(--bg-card);  
+  border: 1px solid var(--border-color);
   border-radius: 14px;
   padding: 22px;
-  box-shadow: 0 8px 25px --bg-card;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.5);
   transition: all 0.3s ease;
-  border-left: 5px solid #3b82f6;
+  border-left: 4px solid var(--brand-primary);
   position: relative;
   overflow: hidden;
 }
 
+/* Glow overlay */
 .achievement-card::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(120 deg, transparent, --bg-card, transparent);
+  background: linear-gradient(
+    120deg,
+    transparent,
+    var(--brand-glow),
+    transparent
+  ); 
   opacity: 0;
   transition: 0.4s;
 }
@@ -429,27 +434,28 @@
 .achievement-header h3 {
   font-size: 18px;
   margin: 0;
-  color: #f9fafb;
+  color: var(--text-white);
 }
 
 .achievement-date {
   font-size: 12px;
-  color: #cbd5f5;
-  background: rgba(59,130,246,0.15);
+  color: var(--text-muted);
+  background: rgba(14,165,233,0.15);
   padding: 4px 10px;
   border-radius: 6px;
 }
 
 .achievement-desc {
   font-size: 14px;
-  color: #d1d5db;
+  color: var(--text-main);
   line-height: 1.6;
 }
 
 .achievement-card:hover {
-  transform: translateY(-8px) scale(1.01);
+  transform: translateY(-8px);
+  background-color: var(--bg-card-hover); /* matches your theme */
   box-shadow: 0 15px 40px rgba(0,0,0,0.8);
-  border-left: 5px solid #60a5fa;
+  border-left: 4px solid var(--brand-primary);
 }
 
 .achievement-card:hover::before {
